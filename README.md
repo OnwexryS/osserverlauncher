@@ -16,6 +16,7 @@ All settings made from console are saving to ossettings.ini
 You can edit settings from there. You need to restart launcher after changing settings.
 
 **ossettings.ini:**
+
 ![PreviewSSOfTheOsSettings](readmeAssets/settings.png)
 
 ### ***Features to be added:***
