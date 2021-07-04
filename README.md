@@ -23,6 +23,7 @@ You can edit settings from there. You need to restart launcher after changing se
 - Language support for English
 - Multiple server jvm flag recommendations (Like ZGC and G1GC options)
 - Improved and detailed recommendations
+- Changeable server jar name
 - More settings like setting Dnashorn deprecation warnings, setting Duser language
 
 
