@@ -43,7 +43,7 @@ flags= -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:-UseParallelG
 ```
 
 Check these posts if you are interested about ZGC:
-* [HIGHER PERFORMANCE CRAFTING: USING JDK11+ AND ZGC](https://github.com/krusic22/Potato-Scripts/blob/master/Linux_StartScript.sh)
+* [HIGHER PERFORMANCE CRAFTING: USING JDK11+ AND ZGC](https://krusic22.com/2020/03/25/higher-performance-crafting-using-jdk11-and-zgc/)
 * [Potato-Script's Linux Start Script](https://github.com/krusic22/Potato-Scripts/blob/master/Linux_StartScript.sh)
 
 ## License
