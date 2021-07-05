@@ -3,6 +3,9 @@
 
 ![PreviewSSFromTheConsole](readmeAssets/preview.png)
 
+
+![PreviewSSFromTheConsole2](readmeAssets/preview2.png)
+
 ### ***Features:***
 - Clean and beautiful console
 - Dynamic colors depending on operations
@@ -18,6 +21,8 @@ You can edit settings from there. You need to restart launcher after changing se
 **ossettings.ini:**
 
 ![PreviewSSOfTheOsSettings](readmeAssets/settings.png)
+
+
 
 ### ***Features to be added:***
 - Language support for English
