@@ -30,7 +30,7 @@ You can edit settings from there. You need to restart launcher after changing se
 
 Current jvm flags are Aikar's flags [Click to navigate to post](https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/). His flags are very good for MC 1.8+ and Java 8+. I recommend to read all of the post even if you won't use it.
 
-Now I started to test ZGC instead of G1GC. Here you can use my test settings:
+Now I started to test ZGC instead of G1GC. Here you can use my test settings (Requires Windows build 1903 or newer):
 ```
 ram=8000
 title=Test 1.17
