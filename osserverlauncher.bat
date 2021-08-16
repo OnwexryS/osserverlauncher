@@ -1,5 +1,5 @@
 @echo off
-title Onwexry's Server Console @2.0!
+title Onwexry's Server Console @2.3!
 
 
 
