@@ -68,9 +68,10 @@ if %a%==0 goto a0
 	echo [7] Yazarak Baslaticiya Title Ekleyin	
 	echo [8] Yazarak Onerilere Bakin
 	echo [9] Yazarak Log Dosyalarini Acin
-	echo [10] Yazarak Baslaticiyi Kapatin
+	echo [10] Yazarak JVM Flag Orneklerini Acin & echo.
 
-	set /p udefine=
+	set /p udefine= Secim: 
+	if %udefine%==0 exit()
 	if %udefine%==1 goto start
 	if %udefine%==2 goto mb
 	if %udefine%==3 goto pb
@@ -80,7 +81,7 @@ if %a%==0 goto a0
 	if %udefine%==7 goto newtitle
 	if %udefine%==8 goto oneriler
 	if %udefine%==9 goto openlogs
-	if %udefine%==10 exit()
+	if %udefine%==10 goto flagselector
 	echo Islem Tamamlandi 
 	goto menu
 
@@ -95,9 +96,57 @@ echo server.jar Bulunamadi.
 	goto menu
 :ae
 
+:flagselector
+color 9f
+cls
+echo Herhangi bir flag secildiginde ossettings.ini icinde bulunan flagin uzerine yazilir & echo.
+echo Duser Language: EN, Dnashorn Deprecation Warnings Hidden & echo.
+echo [0] Ana Menu & echo.
+echo [1] Aikar's Flags for 12+ GB Ram(onerilir)
+echo Timings raporunda old gen collections yuksek cikarsa alttaki flagi deneyin & echo.
+echo [2] Aikar's Flags for 6-10 GB Ram
+echo Aikar'in onerdigi stok flagdir & echo.
+echo [3] ZGC Flags (deneysel, onerilmez)
+echo Windows 1803 Guncellemesini almis sunucularda calisir (Windows Server 2019, Windows 10) & echo.
+echo [4] Bos Flag
+echo Java16 Surumunde flag kullaniminiz sart degildir & echo. & echo. & echo.
+echo Mevcut kullanilan flag: %flags%
+set /p secim= Secim: 
 
-echo Hata! Yeniden Deneyin.
+if %secim%==1 goto aikar12flag
+if %secim%==2 goto aikar6flag
+if %secim%==3 goto zgcflag
+if %secim%==4 goto clearflags
 goto menu
+
+:aikar12flag
+set ram > ossettings.ini
+set flags= -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=40 -XX:G1MaxNewSizePercent=50 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=15 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=20 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Duser.language=EN -Dnashorn.args=--no-deprecation-warning -Daikars.new.flags=true
+set title >> ossettings.ini
+set flags >> ossettings.ini
+goto flagselector
+
+:aikar6flag
+set ram > ossettings.ini
+set flags= -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Duser.language=EN -Dnashorn.args=--no-deprecation-warning -Daikars.new.flags=true
+set title >> ossettings.ini
+set flags >> ossettings.ini
+goto flagselector
+
+:zgcflag
+set ram > ossettings.ini
+set flags= -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:-UseParallelGC -XX:-UseParallelGC -XX:-UseG1GC -XX:+UseZGC -Dnashorn.args=--no-deprecation-warning -Duser.language=EN
+set title >> ossettings.ini
+set flags >> ossettings.ini
+goto flagselector
+
+:clearflags
+set ram > ossettings.ini
+set flags= -Dnashorn.args=--no-deprecation-warning -Duser.language=EN
+set title >> ossettings.ini
+set flags >> ossettings.ini
+goto flagselector
+
 
 :mb
 color A0
@@ -204,6 +253,7 @@ java -Xms%ram%M -Xmx%ram%M %flags% -jar server.jar nogui
 echo.
 echo Saat (%time%)'de Sunucu Durduruldu
 echo Loglar Icin 'Logs' klasorune bakiniz
+set /p wait= Enter Basarak Menuye Donebilirsin
 goto menu
 
 :exit
