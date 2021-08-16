@@ -119,6 +119,7 @@ echo Hafizanizi M(mb) Cinsinden Girin
 set /p ram=
 set ram > ossettings.ini
 set title >> ossettings.ini
+set flags >> ossettings.ini
 cls
 goto menu
 
@@ -128,6 +129,7 @@ set /p title=Giriniz:
 title Tag: %title%
 set ram > ossettings.ini
 set title >> ossettings.ini
+set flags >> ossettings.ini
 cls
 goto menu
 
