@@ -8,18 +8,24 @@ if exist ossettings.ini (
 	goto menu
 )
 color 9f
-title Onwexry's Server Console Kurulum 1/2
+title Onwexry's Server Console Kurulum 1/3
 echo O's Konsoluna Hosgeldin
-echo Kurulum Ekranindasin
+echo Kurulum Ekranindasin & echo.
+echo Sunucuna Bir Isim Ver & echo.
+set title= [7] Yazarak Baslaticiya Title Ekleyin
+set /p title=
+cls
+title Onwexry's Server Console Kurulum 2/3
 echo Ramini Mb Cinsinden Gir
 set /p ram=
-set title= [7] Yazarak Baslaticiya Title Ekleyin
 set ram > ossettings.ini
 set flags= -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=40 -XX:G1MaxNewSizePercent=50 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=15 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=20 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dnashorn.args=--no-deprecation-warning -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true
 set title >> ossettings.ini
 set flags >> ossettings.ini
 cls
-title Onwexry's Server Console Kurulum 2/2
+
+
+title Onwexry's Server Console Kurulum 3/3
 echo Onerilen baslatici kodu otomatik olarak girildi
 echo Degistirmek icin ossettings.ini dosyasina girin
 echo.
@@ -48,7 +54,7 @@ if %a%==0 goto a0
 	echo                                                 +-------+.    
 	echo                                                 ^|`.     ^| `.  
 	echo                                                 ^|  `+---+---+
-	echo            OsBaslatici 2.0                      ^|   ^|   ^|   ^|
+	echo            OsBaslatici 2.2                      ^|   ^|   ^|   ^|
 	echo   Seciminizi klavyeden girip [Enter] basiniz    ^|   ^|   ^|   ^|
 	echo                                                 +---+---+.  ^|
 	echo                                                  `. ^|     `.^|
@@ -61,7 +67,8 @@ if %a%==0 goto a0
 	echo [6] Yazarak Paneli Temizleyin ve Yenileyin
 	echo [7] Yazarak Baslaticiya Title Ekleyin	
 	echo [8] Yazarak Onerilere Bakin
-	echo [9] Yazarak Baslaticiyi Kapatin
+	echo [9] Yazarak Log Dosyalarini Acin
+	echo [10] Yazarak Baslaticiyi Kapatin
 
 	set /p udefine=
 	if %udefine%==1 goto start
@@ -72,7 +79,8 @@ if %a%==0 goto a0
 	if %udefine%==6 cls
 	if %udefine%==7 goto newtitle
 	if %udefine%==8 goto oneriler
-	if %udefine%==9 exit()
+	if %udefine%==9 goto openlogs
+	if %udefine%==10 exit()
 	echo Islem Tamamlandi 
 	goto menu
 
@@ -131,6 +139,10 @@ set ram > ossettings.ini
 set title >> ossettings.ini
 set flags >> ossettings.ini
 cls
+goto menu
+
+:openlogs
+if exist "logs\latest.log" start "logs\latest.log"
 goto menu
 
 :clearlogs
