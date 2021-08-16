@@ -6,6 +6,12 @@
 
 ![PreviewSSFromTheConsole2](readmeAssets/preview2.png)
 
+
+
+
+![JVMFlagMenu](readmeAssets/preview3.png)
+
+
 ### ***Features:***
 - Clean and beautiful console
 - Dynamic colors depending on operations
