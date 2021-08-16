@@ -54,7 +54,7 @@ if %a%==0 goto a0
 	echo                                                 +-------+.    
 	echo                                                 ^|`.     ^| `.  
 	echo                                                 ^|  `+---+---+
-	echo            OsBaslatici 2.2                      ^|   ^|   ^|   ^|
+	echo            OsBaslatici 2.3                      ^|   ^|   ^|   ^|
 	echo   Seciminizi klavyeden girip [Enter] basiniz    ^|   ^|   ^|   ^|
 	echo                                                 +---+---+.  ^|
 	echo                                                  `. ^|     `.^|
