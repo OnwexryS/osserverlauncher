@@ -1,5 +1,5 @@
 @echo off
-title Onwexry's Server Console @2.5!
+title Onwexry's Server Console @2.3!
 
 
 
@@ -91,7 +91,7 @@ if %a%==0 goto a0
 	echo %menu_b9%
 	echo %menu_b10%
 
-	set /p udefine= Secim: 
+	set /p udefine= %menu_selection% 
 	if %udefine%==0 exit()
 	if %udefine%==1 goto start
 	if %udefine%==2 goto mb
@@ -132,7 +132,7 @@ echo %flagselector_9% & echo.
 echo %flagselector_10%
 echo %flagselector_11% & echo. & echo. & echo.
 echo %flagselector_12% %flags%
-set /p secim= Secim: 
+set /p secim= %flagselector_selection%
 
 if %secim%==1 goto aikar12flag
 if %secim%==2 goto aikar6flag
@@ -301,7 +301,7 @@ set setup4_3=          Press [Enter] to continue
 set setup4_4=  Before open your server to community
 set setup4_5= It's recommended to see recommends menu
 
-set menu_1=           OsLauncher 2.5  
+set menu_1=           OsLauncher 2.3  
 set menu_2=  Type the button number then press [Enter] 
 set menu_b1=[1] Run the server
 set menu_b2=[2] Start map backup
@@ -313,6 +313,7 @@ set menu_b7=[7] Set a title to launcher
 set menu_b8=[8] See recommends
 set menu_b9=[9] Open the logs folder(Soon)
 set menu_b10=[10] Open JVM Flag Examples
+set menu_selection=Select:
 
 set error_serverjar_1=server.jar is not found.
 set error_serverjar_2=Rename the ".jar" server file as
@@ -332,6 +333,7 @@ set flagselector_9=Works on the servers which has update Windows 1803 (Windows S
 set flagselector_10=[4] Empty Flag
 set flagselector_11=Version Java16 doesn't need flags as much as older Java versions
 set flagselector_12=Current using flag:
+set flagselector_selection=Select: 
 
 
 set mapbackup_foldername=saves
@@ -391,7 +393,7 @@ set setup4_3=          Devam etmek icin [Enter]
 set setup4_4=          Sunucunuzu Acmadan Once 
 set setup4_5=Onerilere Bakmaniz Siddetle Tavsiye Edilir 
 
-set menu_1=           OsBaslatici 2.5 
+set menu_1=           OsBaslatici 2.3 
 set menu_2=  Seciminizi klavyeden girip [Enter] basiniz
 set menu_b1=[1] Yazarak Sunucuyu Baslatin
 set menu_b2=[2] Yazarak Haritayi Yedekleyin
@@ -403,6 +405,7 @@ set menu_b7=[7] Yazarak Baslaticiya Title Ekleyin
 set menu_b8=[8] Yazarak Onerilere Bakin
 set menu_b9=[9] Yazarak Log Dosyalarini Acin
 set menu_b10=[10] Yazarak JVM Flag Orneklerini Acin
+set menu_selection=Secim:
 
 
 set error_serverjar_1=server.jar Bulunamadi.
@@ -422,6 +425,7 @@ set flagselector_9=Windows 1803 Guncellemesini almis sunucularda calisir (Window
 set flagselector_10=[4] Bos Flag
 set flagselector_11=Java16 Surumunde flag kullaniminiz sart degildir
 set flagselector_12=Mevcut kullanilan flag: 
+set flagselector_selection=Secim: 
 
 set mapbackup_foldername=yedek
 set mapbackup_1=Nether Kopyalansın Mi ?
