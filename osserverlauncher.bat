@@ -1,5 +1,5 @@
 @echo off
-title Onwexry's Server Console @2.3!
+title Onwexry's Server Console @2.5!
 
 
 
@@ -301,7 +301,7 @@ set setup4_3=          Press [Enter] to continue
 set setup4_4=  Before open your server to community
 set setup4_5= It's recommended to see recommends menu
 
-set menu_1=           OsLauncher 2.3  
+set menu_1=           OsLauncher 2.5  
 set menu_2=  Type the button number then press [Enter] 
 set menu_b1=[1] Run the server
 set menu_b2=[2] Start map backup
@@ -391,7 +391,7 @@ set setup4_3=          Devam etmek icin [Enter]
 set setup4_4=          Sunucunuzu Acmadan Once 
 set setup4_5=Onerilere Bakmaniz Siddetle Tavsiye Edilir 
 
-set menu_1=           OsBaslatici 2.3 
+set menu_1=           OsBaslatici 2.5 
 set menu_2=  Seciminizi klavyeden girip [Enter] basiniz
 set menu_b1=[1] Yazarak Sunucuyu Baslatin
 set menu_b2=[2] Yazarak Haritayi Yedekleyin
