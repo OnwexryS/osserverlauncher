@@ -9,7 +9,9 @@
 
 
 
-![JVMFlagMenu](readmeAssets/preview3.png)
+![SetupMenu](readmeAssets/preview3.png)
+![SetupMenu](readmeAssets/preview4.png)
+![SetupMenu](readmeAssets/preview5.png)
 
 
 ### ***Features:***
@@ -20,6 +22,16 @@
 - Option to give tags to the consoles
 - Recommendations for new server owners
 - Changeable start code
+- Easy backupping
+- Easy log and backup cleaning
+- Multilanguage Support
+- Aimed to providing optimizations
+
+Easy to find the console between lots of tabs
+![Tabs](readmeAssets/tabs.png)
+
+
+
 
 All settings made from console are saving to ossettings.ini
 You can edit settings from there. You need to restart launcher after changing settings.
@@ -31,11 +43,9 @@ You can edit settings from there. You need to restart launcher after changing se
 
 
 ### ***Features to be added:***
-- Language support for English
-- Multiple server jvm flag recommendations (Like ZGC and G1GC options)
 - Improved and detailed recommendations
 - Changeable server jar name
-- More settings like setting Dnashorn deprecation warnings, setting Duser language
+- More settings like setting Dnashorn deprecation warnings, setting Duser language(Always set for now which is recommended)
 
 
 
