@@ -250,7 +250,7 @@ goto menu
 
 :start
 color 0b
-echo Yurutulen baslatma kodu: -Xms%ram%M -Xmx%ram%M %flags% -jar server.jar nogui
+echo %run_message_1% -Xms%ram%M -Xmx%ram%M %flags% -jar server.jar nogui
 java -Xms%ram%M -Xmx%ram%M %flags% -jar server.jar nogui
 echo.
 echo %serverstopped_1%%time%%serverstopped_2%
@@ -374,6 +374,8 @@ set serverstopped_2=)
 set serverstopped_3=To see logs check 'Logs' folder
 set serverstopped_4=Press [Enter] to continue
 
+set run_message_1=Startup Flags:
+
 exit /b
 
 
@@ -462,6 +464,7 @@ set serverstopped_2=)'de Sunucu Durduruldu
 set serverstopped_3=Loglar Icin 'Logs' klasorune bakiniz
 set serverstopped_4=Enter Basarak Menuye Donebilirsin
 
+set run_message_1=Yurutulen baslatma kodu:
 
 exit /b
 
