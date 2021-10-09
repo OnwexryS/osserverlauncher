@@ -120,19 +120,19 @@ goto menu
 :flagselector
 color 9f
 cls
-echo %flagselector_1% & echo.
-echo %flagselector_2% & echo.
-echo %flagselector_3% & echo.
-echo %flagselector_4%
-echo %flagselector_5% & echo.
-echo %flagselector_6%
-echo %flagselector_7% & echo.
-echo %flagselector_8%
-echo %flagselector_9% & echo.
-echo %flagselector_10%
-echo %flagselector_11% & echo. & echo. & echo.
-echo %flagselector_12% %flags%
-set /p secim= %flagselector_selection%
+echo %message_flagselector_1% & echo.
+echo %message_flagselector_2% & echo.
+echo %message_flagselector_3% & echo.
+echo %message_flagselector_4%
+echo %message_flagselector_5% & echo.
+echo %message_flagselector_6%
+echo %message_flagselector_7% & echo.
+echo %message_flagselector_8%
+echo %message_flagselector_9% & echo.
+echo %message_flagselector_10%
+echo %message_flagselector_11% & echo. & echo. & echo.
+echo %message_flagselector_12% %flags%
+set /p secim= %message_flagselector_selection%
 
 if %secim%==1 goto aikar12flag
 if %secim%==2 goto aikar6flag
@@ -185,15 +185,15 @@ cls
 goto menu
 
 :setram
-echo %ram_1%
-set /p ram=%ram_enter%
+echo %message_ram_1%
+set /p ram=%message_ram_enter%
 call :savesettings
 cls
 goto menu
 
 :newtitle
-echo %title_1%
-set /p title=%title_enter%
+echo %message_title_1%
+set /p title=%message_title_enter%
 title Tag: %title%
 call :savesettings
 cls
@@ -299,7 +299,7 @@ set setup4_1=Recommended jvm flags entered automatically
 set setup4_2=To change it edit the ossettings.ini file
 set setup4_3=          Press [Enter] to continue
 set setup4_4=  Before open your server to community
-set setup4_5= It's recommended to see recommends menu
+set setup4_5=       Check recommendations menu
 
 set menu_1=           OsLauncher 2.5  
 set menu_2=  Type the button number then press [Enter] 
@@ -321,19 +321,19 @@ set error_serverjar_3=server.jar
 set error_serverjar_4=Then press "Enter" to continue
 
 
-set flagselector_1=Once a flag is chosen, launcher replaces the flag in ossettings.ini
-set flagselector_2=Duser Language: EN, Dnashorn Deprecation Warnings Hidden
-set flagselector_3=[0] Main Menu
-set flagselector_4=[1] Aikar's Flags for 12+ GB Ram(recommended)
-set flagselector_5=If you have high old gen collections in timings report try the flag below
-set flagselector_6=[2] Aikar's Flags for 6-10 GB Ram
-set flagselector_7=Aikar's recommended stock flag
-set flagselector_8=[3] ZGC Flags (experimental, not recommended)
-set flagselector_9=Works on the servers which has update Windows 1803 (Windows Server 2019, Windows 10)
-set flagselector_10=[4] Empty Flag
-set flagselector_11=Version Java16 doesn't need flags as much as older Java versions
-set flagselector_12=Current using flag:
-set flagselector_selection=Select: 
+set message_flagselector_1=Once a flag is chosen, launcher replaces the flag in ossettings.ini
+set message_flagselector_2=Duser Language: EN, Dnashorn Deprecation Warnings Hidden
+set message_flagselector_3=[0] Main Menu
+set message_flagselector_4=[1] Aikar's Flags for 12+ GB Ram(recommended)
+set message_flagselector_5=If you have high old gen collections in timings report try the flag below
+set message_flagselector_6=[2] Aikar's Flags for 6-10 GB Ram
+set message_flagselector_7=Aikar's recommended stock flag
+set message_flagselector_8=[3] ZGC Flags (experimental, not recommended)
+set message_flagselector_9=Works on the servers which has update Windows 1803 (Windows Server 2019, Windows 10)
+set message_flagselector_10=[4] Empty Flag
+set message_flagselector_11=Version Java16 doesn't need flags as much as older Java versions
+set message_flagselector_12=Current using flag:
+set message_flagselector_selection=Select: 
 
 
 set mapbackup_foldername=saves
@@ -344,11 +344,11 @@ set mapbackup_no= N
 set mapbackup_selection=[Y] Yes, [N] No.
 
 
-set ram_1=Set your ram as M(mb)
-set ram_enter=Enter:
+set message_ram_1=Set your ram as M(mb)
+set message_ram_enter=Enter:
 
-set title_1=Set your title
-set title_enter=Enter:
+set message_title_1=Set your title
+set message_title_enter=Enter:
 
 set clearlogs_1=Will Server logs deleted?
 set clearlogs_2=Will Skript logs deleted?
@@ -370,7 +370,7 @@ set recommendations_7=[Enter] To go back
 
 
 set serverstopped_1=Server has stopped at (
-set serverstopped_2=)
+set serverstopped_2= )
 set serverstopped_3=To see logs check 'Logs' folder
 set serverstopped_4=Press [Enter] to continue
 
@@ -415,19 +415,19 @@ set error_serverjar_2=Sunucunuzun Calistirilacak ".jar" Uzantili Dosyasini
 set error_serverjar_3=server.jar Olarak Degistirin.
 set error_serverjar_4=Islemi Yaptiktan Sonra "Enter" a Basin
 
-set flagselector_1=Herhangi bir flag secildiginde ossettings.ini icinde bulunan flagin uzerine yazilir
-set flagselector_2=Duser Language: EN, Dnashorn Deprecation Warnings Hidden
-set flagselector_3=[0] Ana Menu
-set flagselector_4=[1] Aikar's Flags for 12+ GB Ram(onerilir)
-set flagselector_5=Timings raporunda old gen collections yuksek cikarsa alttaki flagi deneyin
-set flagselector_6=[2] Aikar's Flags for 6-10 GB Ram
-set flagselector_7=Aikar'in onerdigi stok flagdir
-set flagselector_8=[3] ZGC Flags (deneysel, onerilmez)
-set flagselector_9=Windows 1803 Guncellemesini almis sunucularda calisir (Windows Server 2019, Windows 10)
-set flagselector_10=[4] Bos Flag
-set flagselector_11=Java16 Surumunde flag kullaniminiz sart degildir
-set flagselector_12=Mevcut kullanilan flag: 
-set flagselector_selection=Secim: 
+set message_flagselector_1=Herhangi bir flag secildiginde ossettings.ini icinde bulunan flagin uzerine yazilir
+set message_flagselector_2=Duser Language: EN, Dnashorn Deprecation Warnings Hidden
+set message_flagselector_3=[0] Ana Menu
+set message_flagselector_4=[1] Aikar's Flags for 12+ GB Ram(onerilir)
+set message_flagselector_5=Timings raporunda old gen collections yuksek cikarsa alttaki flagi deneyin
+set message_flagselector_6=[2] Aikar's Flags for 6-10 GB Ram
+set message_flagselector_7=Aikar'in onerdigi stok flagdir
+set message_flagselector_8=[3] ZGC Flags (deneysel, onerilmez)
+set message_flagselector_9=Windows 1803 Guncellemesini almis sunucularda calisir (Windows Server 2019, Windows 10)
+set message_flagselector_10=[4] Bos Flag
+set message_flagselector_11=Java16 Surumunde flag kullaniminiz sart degildir
+set message_flagselector_12=Mevcut kullanilan flag: 
+set message_flagselector_selection=Secim: 
 
 set mapbackup_foldername=yedek
 set mapbackup_1=Nether Kopyalansın Mi ?
@@ -436,11 +436,11 @@ set mapbackup_yes= E
 set mapbackup_no= H
 set mapbackup_selection=[E] Evet, [H] Hayir.
 
-set ram_1=Hafizanizi M(mb) Cinsinden Girin
-set ram_enter=Giriniz:
+set message_ram_1=Hafizanizi M(mb) Cinsinden Girin
+set message_ram_enter=Giriniz:
 
-set title_1=Baslik Etiketinizi Girin
-set title_enter=Giriniz:
+set message_title_1=Baslik Etiketinizi Girin
+set message_title_enter=Giriniz:
 
 set clearlogs_1=Minecraft_server loglari silinsin mi?
 set clearlogs_2=Skript loglari silinsin mi?
@@ -460,7 +460,7 @@ set recommendations_6=Yakinda daha detayli oneriler yazilacaktir
 set recommendations_7=Menuye geri donmek icin [Enter]
 
 set serverstopped_1=Saat (
-set serverstopped_2=)'de Sunucu Durduruldu
+set serverstopped_2= )'de Sunucu Durduruldu
 set serverstopped_3=Loglar Icin 'Logs' klasorune bakiniz
 set serverstopped_4=Enter Basarak Menuye Donebilirsin
 
