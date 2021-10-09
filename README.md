@@ -1,5 +1,5 @@
 # ***Os Server Launcher***
-## a command prompt launcher for Minecraft Servers focused on intelligibility and optimization
+## A command prompt launcher for Minecraft Servers focused on intelligibility and optimization
 
 ![PreviewSSFromTheConsole](readmeAssets/preview.png)
 
@@ -61,6 +61,16 @@ flags= -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:-UseParallelG
 Check these posts if you are interested about ZGC:
 * [HIGHER PERFORMANCE CRAFTING: USING JDK11+ AND ZGC](https://krusic22.com/2020/03/25/higher-performance-crafting-using-jdk11-and-zgc/)
 * [Potato-Script's Linux Start Script](https://github.com/krusic22/Potato-Scripts/blob/master/Linux_StartScript.sh)
+
+
+
+<br/><br/><br/><br/>
+
+# [⏬⏬Click to redirect to download page⏬⏬](https://github.com/furkanaliunal/osserverlauncher/releases)
+
+<br/><br/><br/><br/><br/><br/>
+
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
